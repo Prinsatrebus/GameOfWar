@@ -7,7 +7,9 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
 
 import random
 
-playing = True
+game_on = True
+
+at_war = False
 
 #Create Class that will be used to define every card object in deck
 
@@ -16,7 +18,7 @@ class Card():
     def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
-        self.value = Values[rank]
+        self.value = values[rank]
         
         
     def __str__(self):
@@ -29,7 +31,6 @@ class Deck():
     def __init__(self):
         self.all_cards = []
         
-        #Create all 52 cards in deck 
         for suit in suits:
             for rank in ranks:
                 
@@ -41,4 +42,34 @@ class Deck():
     def shuffle(self):
         
         random.shuffle(self.all_cards)
+        
+    def deal_one(self):
+        
+        return self.all_cards.pop(0)
+    
+#Create Class that will be used to represent players and contain lists for player "hands"
+
+class Player():
+    
+    def __init__(self, name):
+        
+        self.name = name
+        self.all_cards = []
+        
+    def remove_one(self):
+        
+        return self.all_cards.pop(0)
+        
+    def add_cards(self,new_cards):
+        
+        if type(new_cards) == type([]):
+            #for multiple card additions
+            self.all_cards.extend(new_cards)
+        else:
+            #for single card additions
+            self.all_cards.append(new_cards)
+        
+    def __str__(self):
+        
+        return f'Player {self.name} has {len(self.all_cards)} cards.'
         
