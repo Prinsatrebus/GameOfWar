@@ -39,6 +39,8 @@ class Deck():
                 
                 self.all_cards.append(created_card)
                 
+        print('Successfully created deck')
+                
     def shuffle(self):
         
         random.shuffle(self.all_cards)
