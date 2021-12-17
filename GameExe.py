@@ -1,4 +1,4 @@
-import CardClass
+from CardClass import *
 
 #Game Setup, create both players using Player class; new_deck is initial game deck that is shuffled and distributed into player_one/two.all_cards[] list
 
@@ -16,3 +16,4 @@ for x in range(26):
 
 #While Game On
 
+#While at war
