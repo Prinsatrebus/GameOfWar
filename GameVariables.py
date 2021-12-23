@@ -1,4 +1,4 @@
-#Define all card values to be used in deck
+# Define all card values to be used in deck
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King','Ace')
@@ -11,7 +11,7 @@ game_on = True
 
 at_war = False
 
-#Create Class that will be used to define every card object in deck
+# Create Class that will be used to define every card object in deck
 
 class Card():
     
@@ -22,9 +22,9 @@ class Card():
         
         
     def __str__(self):
-        return self.rank + " of" + self.suit 
+        return self.rank + " of " + self.suit 
     
-#Class that will be used to create and contain all card objects 
+# Class that will be used to create and contain all card objects 
 
 class Deck():
     
@@ -49,7 +49,7 @@ class Deck():
         
         return self.all_cards.pop(0)
     
-#Create Class that will be used to represent players and contain lists for player "hands"
+# Create Class that will be used to represent players and contain lists for player "hands"
 
 class Player():
     
@@ -65,10 +65,10 @@ class Player():
     def add_cards(self,new_cards):
         
         if type(new_cards) == type([]):
-            #for multiple card additions
+            # for multiple card additions
             self.all_cards.extend(new_cards)
         else:
-            #for single card additions
+            # for single card additions
             self.all_cards.append(new_cards)
         
     def __str__(self):
