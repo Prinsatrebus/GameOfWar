@@ -1,4 +1,4 @@
-from CardClass import *
+import CardClass.py as game_classes 
 
 #Game Setup, create both players using Player class; new_deck is initial game deck that is shuffled and distributed into player_one/two.all_cards[] list
 
