@@ -7,10 +7,6 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
 
 import random
 
-game_on = True
-
-at_war = False
-
 # Create Class that will be used to define every card object in deck
 
 class Card():
